@@ -13,58 +13,65 @@
 		<section id="polska-2020" class="container-fluid">
 			<h2>Polska 2020 - rok kryzysu, rok zmiany</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare sagittis augue, sollicitudin eleifend lorem ultricies a. Duis tincidunt volutpat aliquet. Quisque et tortor erat. Cras at volutpat ipsum. Mauris pretium aliquet dui id euismod. Maecenas augue lectus, convallis ut tellus et, tempus varius ante. Duis sit amet est molestie, tempor felis eu, hendrerit magna. Nam nisi massa, tincidunt at lorem at, interdum accumsan erat. Aenean a tortor orci. Fusce accumsan sit amet orci lacinia vulputate. Mauris ut velit egestas, fringilla mauris sit amet, efficitur nunc.</p>
-			<div class="row-md bg-dark">
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Pracodawcy,</h3>
-					<div class="card-body bg-white">
-						<p>Fusce facilisis nec massa vitae pulvinar. Etiam tincidunt nulla purus, quis blandit urna sagittis eu. Quisque pharetra luctus volutpat. Donec sem quam, aliquet sed pretium in, tristique eget velit.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
+			<div class="row-new">
+				<div class="bg-dark">
+					<div>
+						<div class="card">
+							<h3 class="card-header">Pracodawcy,</h3>
+							<div class="card-body bg-white">
+								<p>Fusce facilisis nec massa vitae pulvinar. Etiam tincidunt nulla purus, quis blandit urna sagittis eu. Quisque pharetra luctus volutpat. Donec sem quam, aliquet sed pretium in, tristique eget velit.</p>
+								<a href="#" class="btn btn-dark">Więcej</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<h3 class="card-header">Pracownicy,</h3>
+							<div class="card-body bg-white">
+								<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum. Nulla facilisi. Praesent interdum tortor in rhoncus sollicitudin. Cras et semper orci.</p>
+								<a href="#" class="btn btn-dark">Więcej</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Pracownicy,</h3>
-					<div class="card-body bg-white">
-						<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum. Nulla facilisi. Praesent interdum tortor in rhoncus sollicitudin. Cras et semper orci.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
 			</div>
 		</section>
 
 		<section id="nowe-reguły-gry" class="container-fluid">
 			<h2>Demokracja bezpośrednia, czyli nowe reguły gry</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare sagittis augue, sollicitudin eleifend lorem ultricies a. Duis tincidunt volutpat aliquet. Quisque et tortor erat. Cras at volutpat ipsum. Mauris pretium aliquet dui id euismod. Maecenas augue lectus, convallis ut tellus et, tempus varius ante. Duis sit amet est molestie, tempor felis eu, hendrerit magna. Nam nisi massa, tincidunt at lorem at, interdum accumsan erat. Aenean a tortor orci. Fusce accumsan sit amet orci lacinia vulputate. Mauris ut velit egestas, fringilla mauris sit amet, efficitur nunc.</p>
-			<div class="row-md bg-dark">
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Inicjatywa</h3>
-					<div class="card-body bg-white">
-						<p>Fusce facilisis nec massa vitae pulvinar. Etiam tincidunt nulla purus, quis blandit urna sagittis eu. Quisque pharetra luctus volutpat. Donec sem quam, aliquet sed pretium in, tristique eget velit.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
+			<div class="row-new">
+				<div class="bg-dark">
+					<div>
+						<div class="card">
+							<h3 class="card-header">Inicjatywa</h3>
+							<div class="card-body bg-white">
+								<p>Fusce facilisis nec massa vitae pulvinar. Etiam tincidunt nulla purus, quis blandit urna sagittis eu. Quisque pharetra luctus volutpat. Donec sem quam, aliquet sed pretium in, tristique eget velit.</p>
+								<g-link :to="`/program/Inicjatywa-obywatelska`" class="btn btn-dark">Więcej</g-link>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<h3 class="card-header">Weto</h3>
+							<div class="card-body bg-white">
+								<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum. Nulla facilisi. Praesent interdum tortor in rhoncus sollicitudin. Cras et semper orci.</p>
+								<g-link :to="`/program/Weto-obywatelskie`" class="btn btn-dark">Więcej</g-link>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<h3 class="card-header">Kontrola sądownictwa</h3>
+							<div class="card-body bg-white">
+								<p>Proin vitae porttitor erat, sed dignissim sapien. In imperdiet dolor felis, id hendrerit odio commodo nec. Maecenas arcu metus, ultricies quis diam ut, auctor vulputate odio. Praesent viverra lectus eu interdum viverra.</p>
+								<g-link :to="`/program/Obywatelska-kontrola-sądownictwa`" class="btn btn-dark">Więcej</g-link>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Weto</h3>
-					<div class="card-body bg-white">
-						<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum. Nulla facilisi. Praesent interdum tortor in rhoncus sollicitudin. Cras et semper orci.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Kontrola sądownictwa</h3>
-					<div class="card-body bg-white">
-						<p>Proin vitae porttitor erat, sed dignissim sapien. In imperdiet dolor felis, id hendrerit odio commodo nec. Maecenas arcu metus, ultricies quis diam ut, auctor vulputate odio. Praesent viverra lectus eu interdum viverra.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
 			</div>
-			<div><a href="#" class="btn btn-lg btn-dark">Przeczytaj cały program</a></div>
+			<div><g-link :to="`/program`" class="btn btn-dark">Przeczytaj cały program</g-link></div>
 		</section>
 
 		<section id="zespół" class="container-fluid">
@@ -118,66 +125,36 @@
 
 		<section id="blog" class="container-fluid">
 			<h2>Blog</h2>
-			<div class="row-md bg-dark">
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Są dwie siostry – jedna rodzi drugą, a druga pierwszą</h3>
-					<div class="card-body bg-white">
-						<p>In ipsum ipsum, mattis non massa at, pellentesque cursus mi. Sed ultricies luctus hendrerit. Quisque id orci neque. Etiam id consectetur elit, semper sollicitudin mauris. Maecenas semper eget justo ac luctus. Maecenas faucibus dui ex, ut molestie neque lobortis in. Etiam laoreet accumsan magna, quis mattis urna. Ut at finibus lacus. Integer non pellentesque lectus, eu auctor dolor. Maecenas nec elit eleifend, convallis ligula eget, auctor libero. Proin molestie lacinia tempus. Nulla ultricies ligula a ex consectetur, non feugiat lectus tempus.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
+			<div class="row-new">
+				<div class="bg-dark">
+					<div v-for="post in posts" :key="post.id">
+						<div class="card">
+							<h3 class="card-header">{{post.title}}</h3>
+							<div class="card-body bg-white">
+								<div v-html="post.lead"></div>
+								<g-link :to="`/blog/${post.id}`" class="btn btn-dark">Więcej</g-link>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Co to za zwierzę, które rano chodzi na czterech nogach, w południe na dwóch, a wieczorem na trzech?</h3>
-					<div class="card-body bg-white">
-						<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
-			</div>
-			<div class="row-md bg-dark">
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Co to za zwierzę, które rano chodzi na czterech nogach, w południe na dwóch, a wieczorem na trzech?</h3>
-					<div class="card-body bg-white">
-						<p>In at odio ipsum. Fusce posuere est mauris, sit amet sagittis metus vestibulum eu. Aenean iaculis dictum ipsum.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Są dwie siostry – jedna rodzi drugą, a druga pierwszą</h3>
-					<div class="card-body bg-white">
-						<p>Fusce facilisis nec massa vitae pulvinar. Etiam tincidunt nulla purus, quis blandit urna sagittis eu.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
-				<div class="card">
-					<h3 class="card-header">Chcesz być milionerem? To nic trudnego. Wystarczy zaufać władzy.</h3>
-					<div class="card-body bg-white">
-						<p>Proin vitae porttitor erat, sed dignissim sapien. In imperdiet dolor felis, id hendrerit odio commodo nec.</p>
-						<a href="#" class="btn btn-dark">Więcej</a>
-					</div>
-				</div>
-				<div class="spacer"></div>
 			</div>
 			<div><g-link :to="`/blog/2`" class="btn btn-dark">Starsze wpisy</g-link></div>
 		</section>
 
 		<section id="kontakt" class="container-fluid">
 			<h2>Kontakt</h2>
-			<div class="row-md">
+			<div class="row-new">
 				<div>
-					<p><strong>Demokracja Bezpośrednia</strong><br>ul. Nowolipki 14/130,<br>01-019 Warszawa</p>
-					<p><a href="mailto:kontakt@db.org.pl">kontakt@db.org.pl</a></p>
-					<p>EwP 322<br>NIP 5213636084<br>REGON 146281388</p>
-				</div>
-				<div class="spacer"></div>
-				<div>
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDemokracjaBezposrednia%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					<div>
+						<div>
+							<p><strong>Demokracja Bezpośrednia</strong><br>ul. Nowolipki 14/130,<br>01-019 Warszawa</p>
+							<p><a href="mailto:kontakt@db.org.pl">kontakt@db.org.pl</a></p>
+							<p>EwP 322<br>NIP 5213636084<br>REGON 146281388</p>
+						</div>
+					</div>
+					<div>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDemokracjaBezposrednia%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -287,3 +264,31 @@
 		</section>
 	</Layout>
 </template>
+
+<page-query>
+query ($page: Int) {
+	allBlogPost(perPage: 5, page: $page) @paginate {
+		pageInfo {
+			totalPages
+			currentPage
+		}
+		edges {
+			node {
+				id
+				title
+				lead
+			}
+		}
+	}
+}
+</page-query>
+
+<script>
+export default {
+	computed: {
+		posts() {
+			return this.$page?.allBlogPost.edges?.map(e => e.node)
+		},
+	}
+}
+</script>

@@ -1,7 +1,8 @@
 <template>
 	<Layout>
 		<section id="program" class="container-fluid" v-if="ready">
-			<h2>XXX</h2>
+			<h2>{{plank.title}}</h2>
+			<p>{{plank.lead}}</p>
 			<div v-html="plank.content"/>
 			<div class="fb-comments" :data-href="`http://db.org.pl/program/${plank.id}`" data-numposts="5" data-width="100%"></div>
 		</section>
@@ -12,6 +13,8 @@
 query ($id: ID!) {
 	plank(id: $id) {
 		id
+		title
+		lead
 		content
 	}
 }
@@ -21,8 +24,10 @@ query ($id: ID!) {
 import { Pager } from 'gridsome'
 
 export default {
-	metaInfo: {
-		title: 'Blog'
+	metaInfo() {
+		return {
+			title: this.plank.title
+		}
 	},
 	components: {
 		Pager

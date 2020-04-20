@@ -2,29 +2,35 @@
 	<Layout>
 		<section id="program" class="container-fluid" v-if="ready">
 			<h2>Program</h2>
-			<div class="card bg-dark" v-for="plank in planks" :key="plank.id">
-				<h3 class="card-header">xxx</h3>
-				<div class="card-body bg-white">
-					<div v-html="plank.content"/>
-					<g-link :to="`/program/${plank.id}`" class="btn btn-dark">Więcej</g-link>
+			<div class="row-new">
+				<div class="bg-dark">
+					<div v-for="plank in planks" :key="plank.id">
+						<div class="card">
+							<h3 class="card-header">{{plank.title}}</h3>
+							<div class="card-body bg-white">
+								<div v-html="plank.lead"/>
+								<g-link :to="`/program/${plank.id}`" class="btn btn-dark">Więcej</g-link>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<Pager :info="pageInfo"/>
 		</section>
 	</Layout>
 </template>
 
 <page-query>
-query ($page: Int) {
-	allPlank(perPage: 10, page: $page) @paginate {
+{
+	allPlank {
 		pageInfo {
 			totalPages
 			currentPage
 		}
 		edges {
 			node {
-				id,
-				content
+				id
+				title
+				lead
 			}
 		}
 	}
@@ -47,9 +53,6 @@ export default {
 		},
 		planks() {
 			return this.$page.allPlank.edges?.map(e => e.node)
-		},
-		pageInfo() {
-			return this.$page.allPlank.pageInfo
 		},
 	}
 }
