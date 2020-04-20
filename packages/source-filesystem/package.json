@@ -1,0 +1,4 @@
+{
+	"description": "Filesystem source for Gridsome",
+	"main": "index.ts"
+}

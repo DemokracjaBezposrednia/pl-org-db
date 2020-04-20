@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/_navbar";
+
+.navbar {
+    padding: 0 1rem;
+}
+.navbar-brand > * {
+    display: block;
+}
+.navbar-brand :first-child {
+    font-size: 23px;
+    line-height: 26px;
+}
+.navbar-brand :last-child {
+    font-size: 20px;
+    line-height: 22px;
+}
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
+@media (min-width: 1200px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

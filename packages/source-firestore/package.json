@@ -1,0 +1,7 @@
+{
+	"description": "Gridsome Source Plugin to load data from Firebase's Firestore",
+	"main": "index.js",
+	"dependencies": {
+		"firebase": "^7.14.1"
+	}
+}

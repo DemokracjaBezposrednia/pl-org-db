@@ -1,0 +1,13 @@
+{
+	"name": "nowa-db",
+	"private": true,
+	"scripts": {
+		"build": "gridsome build",
+		"develop": "gridsome develop",
+		"explore": "gridsome explore"
+	},
+	"devDependencies": {
+		"gridsome": "^0.7.13",
+		"@gridsome/transformer-remark": "^0.5.0"
+	}
+}
