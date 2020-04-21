@@ -3,7 +3,7 @@
 		<section id="program" class="container-fluid" v-if="ready">
 			<h2>{{plank.title}}</h2>
 			<p>{{plank.lead}}</p>
-			<div v-html="plank.content"/>
+			<div v-html="plank.content_html"/>
 			<div class="fb-comments" :data-href="`http://db.org.pl/program/${plank.id}`" data-numposts="5" data-width="100%"></div>
 		</section>
 	</Layout>
@@ -15,22 +15,17 @@ query ($id: ID!) {
 		id
 		title
 		lead
-		content
+		content_html
 	}
 }
 </page-query>
 
 <script>
-import { Pager } from 'gridsome'
-
 export default {
 	metaInfo() {
 		return {
 			title: this.plank.title
 		}
-	},
-	components: {
-		Pager
 	},
 	computed: {
 		ready() {
@@ -42,6 +37,6 @@ export default {
 	},
 	mounted: () => {
 		FB.XFBML.parse();
-	}
+	},
 }
 </script>

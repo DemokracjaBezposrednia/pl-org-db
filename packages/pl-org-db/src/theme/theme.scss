@@ -69,9 +69,20 @@ section, section * {
 	flex-direction: column;
 }
 
-p {
-	display: block;
-	* { display: inline; }
+section {
+	p {
+		display: block;
+		* { display: inline; }
+	}
+
+	li {
+		display: list-item;
+		padding-left: 1em;
+	}
+
+	li:not(:last-child), li > p:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 }
 
 .btn-dark, .btn-light {
@@ -116,10 +127,12 @@ p {
 
 
 section {
-	padding-top: 10vh;
+	padding-top: 5vh;
 	margin-bottom: 2vh;
-	text-align: justify;
-	align-items: center;
+}
+
+#app > section {
+	padding-top: 10vh;
 }
 
 h3 {
@@ -137,17 +150,25 @@ h3 {
 	height: 100%;
 }
 
-section > * {
+section, section > .passthru {
+	text-align: justify;
+	align-items: center;
+}
+
+section > *, section > .passthru > * {
 	justify-content: center;
 }
-section > *:not(:last-child) {
+section > *:not(:last-child), section > .passthru > *:not(:last-child) {
 	margin-bottom: 50px;
 }
 
-section > p {
+section > p, section > .passthru > p {
 	max-width: 900px;
 }
 
+.card-header {
+	text-align: left;
+}
 .card-body > *:not(:last-child) {
 	margin-bottom: 1rem;
 }

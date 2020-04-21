@@ -8,6 +8,6 @@
 	},
 	"devDependencies": {
 		"gridsome": "^0.7.13",
-		"@gridsome/transformer-remark": "^0.5.0"
+		"@pl-org-db/transformer-remark": "^0.5.0"
 	}
 }

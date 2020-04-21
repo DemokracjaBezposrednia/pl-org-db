@@ -5,7 +5,7 @@
 		"@pl-org-db/pl-org-db": "file:packages/pl-org-db",
 		"@pl-org-db/source-filesystem": "file:packages/source-filesystem",
 		"@pl-org-db/source-firestore": "file:packages/source-firestore",
-		"@pl-org-db/types-gridsome": "file:packages/source-firestore"
+		"@pl-org-db/types-gridsome": "file:packages/types-gridsome"
 	},
 	"devDependencies": {
 		"@gridsome/transformer-remark": "^0.5.0",
@@ -17,8 +17,10 @@
 		"gridsome": "^0.7.13",
 		"mime-types": "^2.1.26",
 		"node-sass": "^4.13.1",
+		"remark-parse": "^8.0.1",
 		"sass-loader": "^8.0.2",
 		"slash": "^3.0.0",
-		"typescript": "^3.8.3"
+		"typescript": "^3.8.3",
+		"unified": "^9.0.0"
 	}
 }
