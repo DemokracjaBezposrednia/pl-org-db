@@ -1,8 +1,16 @@
-$enable_rounded: false;
-
 @import "~bootstrap/scss/_functions";
 @import "~bootstrap/scss/_variables";
 @import "~bootstrap/scss/_mixins";
+
+$enable_rounded: false;
+
+$headings-font-weight: normal;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 1.9;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.3;
+$h5-font-size: $font-size-base * 1.2;
+$h6-font-size: $font-size-base * 1.1;
 
 @import "~bootstrap/scss/_root";
 @import "~bootstrap/scss/_reboot";
@@ -78,10 +86,10 @@ section {
 	li {
 		display: list-item;
 		padding-left: 1em;
-	}
 
-	li:not(:last-child), li > p:not(:last-child) {
-		margin-bottom: 1rem;
+		> p, > ul, > ol {
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -132,12 +140,8 @@ section {
 }
 
 #app > section {
-	padding-top: 10vh;
-}
-
-h3 {
-	font-size: 1.5rem;
-	font-weight: normal;
+	margin-top: -50px;
+	padding-top: 100px;
 }
 
 .bg-dark {
@@ -153,13 +157,13 @@ h3 {
 section, section > .passthru {
 	text-align: justify;
 	align-items: center;
-}
 
-section > *, section > .passthru > * {
-	justify-content: center;
-}
-section > *:not(:last-child), section > .passthru > *:not(:last-child) {
-	margin-bottom: 50px;
+	> * {
+		justify-content: center;
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
 }
 
 section > p, section > .passthru > p {
@@ -236,5 +240,104 @@ form {
 			background-color: transparent;
 			color: white;
 		}
+	}
+}
+
+.with-sidebar {
+	align-items: stretch;
+
+	> * {
+		flex-flow: row wrap;
+		align-items: flex-start;
+
+		margin: -25px;
+
+		> * {
+			margin: 25px;
+		}
+
+		> :first-child {
+			width: 500px;
+			flex-grow: 1;
+		}
+
+		> :last-child {
+			width: 250px;
+
+			ul {
+				padding: 0;
+
+				li {
+					padding: 0;
+					display: block;
+					text-align: left;
+
+					* {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+}
+
+article > * {
+	align-items: stretch;
+
+	> * {
+		margin-top: 0.5em;
+		margin-bottom: 0.3em;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	> :first-child {
+		margin-top: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+	}
+
+	> nav {
+		display: block;
+
+		> * {
+			display: block;
+
+			* {
+				display: inline;
+			}
+		}
+	}
+}
+
+aside {
+	text-align: left;
+}
+
+section a[href] {
+	border-bottom: 1px solid;
+	border-bottom-color: hsla(0, 0%, 0%, 0.25) !important;
+	color: inherit;
+	text-decoration: none;
+	transition: border-bottom-color 0.15s ease-in-out;
+
+	&:hover {
+		border-bottom-color: currentColor !important;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+blockquote {
+	border-left: 0.2em solid #ccc;
+	padding: 1em 0 1em 1.5em;
+	color: #777;
+
+	> :last-child {
+		margin-bottom: 0;
 	}
 }

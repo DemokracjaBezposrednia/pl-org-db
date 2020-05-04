@@ -1,37 +1,38 @@
 .hero {
-    padding-top: 0;
-    height: 70vh;
-    min-height: 320px;
-    background: url('../theme/panorama.jpg') center 20% / cover;
-    color: white;
-    display: block;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	height: 70vh;
+	min-height: 320px;
+	background: url('../theme/panorama.jpg') center 20% / cover;
+	color: white;
+	display: block;
 }
 .hero > div {
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(0.5px);
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(0.5px);
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
 }
 .hero > div > div {
-    margin-top: 30px;
-    align-items: center;
-    text-align: left;
+	margin-top: 30px;
+	align-items: center;
+	text-align: left;
 }
 .hero span {
-    filter: drop-shadow(0 0 3px #14355c) drop-shadow(2px 2px 6px black);
+	filter: drop-shadow(0 0 3px #14355c) drop-shadow(2px 2px 6px black);
 }
 .hero h1 {
-    font-size: 70px;
-    font-size: calc(min(14vw, 70px));
-    line-height: 1.1em;
-    font-weight: normal;
+	font-size: 70px;
+	font-size: calc(min(14vw, 70px));
+	line-height: 1.1em;
+	font-weight: normal;
 }
 .hero .lead {
-    font-size: calc(min(6vw, 24px));
-    line-height: 1.3em;
+	font-size: calc(min(6vw, 24px));
+	line-height: 1.3em;
 }
 .hero .btn {
-    padding: 16px 35px;
-    font-size: 14px;
+	padding: 16px 35px;
+	font-size: 14px;
 }

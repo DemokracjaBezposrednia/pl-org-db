@@ -7,7 +7,30 @@
 module.exports = {
 	siteName: 'Demokracja Bezpośrednia',
 	catchLinks: false, // Breaks on fragment identifiers with non-ASCII chars.
+	permalinks: {
+		trailingSlash: false,
+	},
 	plugins: [
+		{
+			use: '@pl-org-db/source-filesystem',
+			options: {
+				typeName: 'Person',
+				baseDir: './ludzie',
+				path: '*.md',
+			}
+		},
+		{
+			use: '@pl-org-db/source-filesystem',
+			options: {
+				typeName: 'Article',
+				baseDir: './blog',
+				path: '*/*.md',
+				v2path: ':author__name/:name.md',
+				refs: {
+					author: 'Person',
+				}
+			}
+		},
 		{
 			use: '@pl-org-db/source-filesystem',
 			options: {
@@ -15,7 +38,7 @@ module.exports = {
 				baseDir: './program',
 				path: '**/*.md',
 			}
-		},
+		},/*
 		{
 			use: '@pl-org-db/source-firestore',
 			options: {
@@ -36,10 +59,17 @@ module.exports = {
 					},
 				],
 			},
-		},
+		},*/
 	],
 	templates: {
 		Plank: '/program/:id',
-		BlogPost: '/blog/:id',
+		Article: '/blog/:author/:slug',
+	},
+	transformers: {
+		remark: {
+			config: {
+				commonmark: true,
+			},
+		}
 	},
 }

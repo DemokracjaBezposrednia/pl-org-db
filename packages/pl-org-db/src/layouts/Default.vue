@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div vocab="http://schema.org/">
 		<div class="bg-dark" style="height: 20px;"></div>
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">

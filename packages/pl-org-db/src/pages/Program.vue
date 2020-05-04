@@ -1,25 +1,25 @@
 <template>
 	<Layout>
 		<section id="program" class="container-fluid" v-if="ready">
-			<h2>Program</h2>
-			<section v-for="chapter in index" :key="chapter.id">
-				<h3>{{chapter.title}}</h3>
+			<h1>Program</h1>
+			<section v-for="chapter in index" :key="chapter.path">
+				<h2>{{chapter.name}}</h2>
 				<p>{{chapter.lead || "Duis accumsan ut dolor vel viverra. Donec tempus mattis faucibus. Nullam hendrerit felis tellus, nec aliquet lectus pellentesque ac. Suspendisse tempus vitae purus vitae porta. Vivamus facilisis tristique sodales."}}</p>
 				<div class="row-new" v-if="chapter.content">
 					<div class="bg-dark">
-						<div v-for="link in chapter.content" :key="link.id">
+						<div v-for="link in chapter.content" :key="link.path">
 							<div class="card">
-								<h3 class="card-header">{{link.title}}</h3>
+								<h3 class="card-header">{{link.name}}</h3>
 								<div class="card-body bg-white">
 									<p>{{link.lead || "Duis accumsan ut dolor vel viverra. Donec tempus mattis faucibus. Nullam hendrerit felis tellus, nec aliquet lectus pellentesque ac. Suspendisse tempus vitae purus vitae porta. Vivamus facilisis tristique sodales."}}</p>
-									<g-link :to="`/program/${link.id}`" class="btn btn-dark">Więcej</g-link>
+									<g-link :to="link.path" class="btn btn-dark">Więcej</g-link>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div class="fb-comments" :data-href="`http://db.org.pl/program/`" data-numposts="5" data-width="100%"></div>
+			<div class="fb-comments" :data-href="`http://db.org.pl/program`" data-numposts="5" data-width="100%"></div>
 		</section>
 	</Layout>
 </template>
@@ -32,8 +32,9 @@
 	allPlank {
 		edges {
 			node {
+				path
 				id
-				title
+				name
 				lead
 			}
 		}
@@ -73,12 +74,9 @@ export default {
 
 			return list.children.map(mapItem)
 		},
-		planks() {
-			return this.$page.allPlank.edges?.map(e => e.node)
-		},
 	},
 	mounted: () => {
-		FB.XFBML.parse();
+		FB.XFBML.parse()
 	},
 }
 </script>

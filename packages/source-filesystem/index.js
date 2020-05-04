@@ -114,6 +114,9 @@ class FilesystemSource {
         const mimeType = mime_types_1.lookup(file) || `application/x-${ext.replace('.', '')}`;
         return {
             id: dir ? `${dir}/${name}` : name,
+            author: dir,
+            name: name,
+            slug: name.replace(/ /g, '-'),
             internal: {
                 mimeType,
                 content,

@@ -129,10 +129,10 @@
 				<div class="bg-dark">
 					<div v-for="post in posts" :key="post.id">
 						<div class="card">
-							<h3 class="card-header">{{post.title}}</h3>
+							<h3 class="card-header">{{post.name}}</h3>
 							<div class="card-body bg-white">
 								<div v-html="post.lead"></div>
-								<g-link :to="`/blog/${post.id}`" class="btn btn-dark">Więcej</g-link>
+								<g-link :to="post.path" class="btn btn-dark">Więcej</g-link>
 							</div>
 						</div>
 					</div>
@@ -267,7 +267,7 @@
 
 <page-query>
 query ($page: Int) {
-	allBlogPost(perPage: 5, page: $page) @paginate {
+	allArticle(perPage: 5, page: $page) @paginate {
 		pageInfo {
 			totalPages
 			currentPage
@@ -275,8 +275,9 @@ query ($page: Int) {
 		edges {
 			node {
 				id
-				title
+				name
 				lead
+				path
 			}
 		}
 	}
@@ -287,7 +288,7 @@ query ($page: Int) {
 export default {
 	computed: {
 		posts() {
-			return this.$page?.allBlogPost.edges?.map(e => e.node)
+			return this.$page?.allArticle.edges?.map(e => e.node)
 		},
 	}
 }
