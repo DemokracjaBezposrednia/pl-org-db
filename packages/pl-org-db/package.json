@@ -1,5 +1,6 @@
 {
 	"name": "nowa-db",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"build": "gridsome build",
@@ -7,7 +8,17 @@
 		"explore": "gridsome explore"
 	},
 	"devDependencies": {
-		"gridsome": "^0.7.13",
-		"@pl-org-db/transformer-remark": "^0.5.0"
+		"@pl-org-db/source-filesystem": "^0.0.0",
+		"@pl-org-db/source-firestore": "^0.0.0",
+		"@pl-org-db/transformer-remark": "^0.0.0",
+		"@pl-org-db/types-gridsome": "^0.0.0",
+		"bootstrap": "^4.4.1",
+		"gridsome": "^0.7.19",
+		"jquery": "^3.5.1",
+		"luxon": "^1.24.1",
+		"node-sass": "^4.13.1",
+		"popper.js": "^1.16.1",
+		"sass-loader": "^9.0.3",
+		"unified": "^9.0.0"
 	}
 }

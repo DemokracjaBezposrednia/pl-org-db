@@ -1,7 +1,15 @@
 {
-	"description": "Gridsome Source Plugin to load data from Firebase's Firestore",
+	"name": "@pl-org-db/source-firestore",
+	"version": "0.0.0",
+	"description": "Firestore source for Gridsome",
 	"main": "index.js",
 	"dependencies": {
 		"firebase": "^7.14.1"
+	},
+	"devDependencies": {
+		"@pl-org-db/types-gridsome": "^0.0.0"
+	},
+	"peerDependencies": {
+		"gridsome": "0.x"
 	}
 }

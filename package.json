@@ -1,28 +1,10 @@
 {
 	"name": "root",
 	"private": true,
-	"dependencies": {
-		"@pl-org-db/pl-org-db": "file:packages/pl-org-db",
-		"@pl-org-db/source-filesystem": "file:packages/source-filesystem",
-		"@pl-org-db/source-firestore": "file:packages/source-firestore",
-		"@pl-org-db/types-gridsome": "file:packages/types-gridsome",
-		"@pl-org-db/transformer-remark": "file:packages/transformer-remark"
-	},
-	"devDependencies": {
-		"@gridsome/transformer-remark": "^0.5.0",
-		"@tyankatsu0105/types-gridsome": "^0.6.0",
-		"@types/mime-types": "^2.1.0",
-		"@types/node": "^13.13.0",
-		"bootstrap": "^4.4.1",
-		"chokidar": "^3.3.1",
-		"gridsome": "^0.7.13",
-		"luxon": "^1.24.1",
-		"mime-types": "^2.1.26",
-		"node-sass": "^4.13.1",
-		"remark-parse": "^8.0.1",
-		"sass-loader": "^8.0.2",
-		"slash": "^3.0.0",
-		"typescript": "^3.8.3",
-		"unified": "^9.0.0"
+	"workspaces": [
+		"packages/*"
+	],
+	"resolutions": {
+		"remark-parse": "^8.0.1"
 	}
 }

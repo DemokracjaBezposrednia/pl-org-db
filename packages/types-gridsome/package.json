@@ -1,3 +1,8 @@
 {
-	"main": "index.js"
+	"name": "@pl-org-db/types-gridsome",
+	"version": "0.0.0",
+	"main": "index.js",
+	"dependencies": {
+		"@tyankatsu0105/types-gridsome": "^0.6.0"
+	}
 }

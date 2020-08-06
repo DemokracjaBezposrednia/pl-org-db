@@ -1,4 +1,19 @@
 {
+	"name": "@pl-org-db/source-filesystem",
+	"version": "0.0.0",
 	"description": "Filesystem source for Gridsome",
-	"main": "index.ts"
+	"main": "index.ts",
+	"dependencies": {
+		"chokidar": "^3.3.1",
+		"mime-types": "^2.1.26",
+		"slash": "^3.0.0"
+	},
+	"devDependencies": {
+		"@pl-org-db/types-gridsome": "^0.0.0",
+		"@types/mime-types": "^2.1.0",
+		"@types/node": "^14.0.27"
+	},
+	"peerDependencies": {
+		"gridsome": "0.x"
+	}
 }

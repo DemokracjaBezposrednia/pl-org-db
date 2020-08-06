@@ -1,3 +1,14 @@
 {
-	"main": "index.js"
+	"name": "@pl-org-db/transformer-remark",
+	"version": "0.0.0",
+	"main": "index.js",
+	"devDependencies": {
+		"@pl-org-db/types-gridsome": "^0.0.0"
+	},
+	"dependencies": {
+		"@gridsome/transformer-remark": "^0.6.1"
+	},
+	"peerDependencies": {
+		"gridsome": "0.x"
+	}
 }
