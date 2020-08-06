@@ -63,7 +63,8 @@ module.exports = {
 	],
 	templates: {
 		Plank: '/program/:id',
-		Article: '/blog/:author/:slug',
+		Person: '/ludzie/:slug',
+		Article: '/ludzie/:author/:slug',
 	},
 	transformers: {
 		remark: {

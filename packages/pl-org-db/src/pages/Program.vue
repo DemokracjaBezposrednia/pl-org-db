@@ -1,8 +1,8 @@
 <template>
 	<Layout>
-		<section id="program" class="container-fluid" v-if="ready">
+		<main class="container-fluid epic" v-if="ready">
 			<h1>Program</h1>
-			<section v-for="chapter in index" :key="chapter.path">
+			<section v-for="chapter in index" :key="chapter.path" class="epic">
 				<h2>{{chapter.name}}</h2>
 				<p>{{chapter.lead || "Duis accumsan ut dolor vel viverra. Donec tempus mattis faucibus. Nullam hendrerit felis tellus, nec aliquet lectus pellentesque ac. Suspendisse tempus vitae purus vitae porta. Vivamus facilisis tristique sodales."}}</p>
 				<div class="row-new" v-if="chapter.content">
@@ -20,7 +20,7 @@
 				</div>
 			</section>
 			<div class="fb-comments" :data-href="`http://db.org.pl/program`" data-numposts="5" data-width="100%"></div>
-		</section>
+		</main>
 	</Layout>
 </template>
 

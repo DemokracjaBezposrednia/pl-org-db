@@ -5,9 +5,6 @@ const {
 } = require('gridsome/graphql')
 
 
-console.log(RemarkTransformer)
-console.log('WUU')
-
 class MyRemarkTransformer extends RemarkTransformer {
 	extendNodeType () {
 		return {

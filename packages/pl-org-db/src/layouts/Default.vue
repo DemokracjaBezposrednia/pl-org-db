@@ -17,8 +17,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Polska 2020</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown01">
-							<a class="dropdown-item" href="#">Pracodawcy</a>
-							<a class="dropdown-item" href="#">Pracownicy</a>
+								<a class="dropdown-item" href="#">Pracodawcy</a>
+								<a class="dropdown-item" href="#">Pracownicy</a>
 							</div>
 						</li>
 						<li class="nav-item">

@@ -51,12 +51,19 @@ $h6-font-size: $font-size-base * 1.1;
 
 html {
 	scroll-behavior: smooth;
-	--root-width: var(width);
 }
 body {
 	font-family: 'Montserrat', sans-serif;
 	padding-bottom: 100px;
 }
+
+main {
+    margin-top: -58px;
+}
+main > * {
+	padding-top: 108px;
+}
+
 .bg-dark {
 	background: linear-gradient(to right, #14355c, #275C90) center / 1140px no-repeat, linear-gradient(to right, #14355c, #14355c) left / 50% no-repeat, linear-gradient(to right, #275C90, #275C90) right / 50% no-repeat;
 	background-color: #275C90 !important;
@@ -72,12 +79,18 @@ body {
   	}
 }
 
-section, section * {
-	display: flex;
-	flex-direction: column;
-}
+main {
+	text-align: justify;
 
-section {
+	&, * {
+		display: flex;
+		flex-flow: column;
+	}
+
+	img {
+		width: 100%;
+	}
+
 	p {
 		display: block;
 		* { display: inline; }
@@ -86,10 +99,33 @@ section {
 	li {
 		display: list-item;
 		padding-left: 1em;
+	}
 
-		> p, > ul, > ol {
-			margin-bottom: 1rem;
+	blockquote {
+		border-left: 0.2em solid #ccc;
+		padding: 1em 0 1em 1.5em;
+		color: #777;
+
+		> :last-child {
+			margin-bottom: 0;
 		}
+	}
+
+	a[href]:not(.btn) {
+		border-bottom: 1px solid;
+		border-bottom-color: hsla(0, 0%, 0%, 0.25) !important;
+		color: inherit;
+		text-decoration: none;
+		transition: border-bottom-color 0.15s ease-in-out;
+
+		&:hover {
+			border-bottom-color: currentColor !important;
+		}
+	}
+
+	strong {
+		font-size: 1.2em;
+		font-weight: 500;
 	}
 }
 
@@ -134,16 +170,6 @@ section {
 }
 
 
-section {
-	padding-top: 5vh;
-	margin-bottom: 2vh;
-}
-
-#app > section {
-	margin-top: -50px;
-	padding-top: 100px;
-}
-
 .bg-dark {
 	color: white;
 }
@@ -154,8 +180,7 @@ section {
 	height: 100%;
 }
 
-section, section > .passthru {
-	text-align: justify;
+.epic {
 	align-items: center;
 
 	> * {
@@ -164,22 +189,15 @@ section, section > .passthru {
 			margin-bottom: 50px;
 		}
 	}
+	> p {
+		max-width: 900px;
+	}
 }
 
-section > p, section > .passthru > p {
-	max-width: 900px;
-}
-
-.card-header {
-	text-align: left;
-}
-.card-body > *:not(:last-child) {
-	margin-bottom: 1rem;
-}
 
 @media (min-width: 768px) {
 	.flex-row-md {
-		flex-direction: row;
+		flex-flow: row;
 	}
 }
 
@@ -194,7 +212,7 @@ section > p, section > .passthru > p {
 }
 
 .form-row {
-	flex-direction: row;
+	flex-flow: row;
 }
 
 form {
@@ -206,13 +224,20 @@ form {
 }
 
 .row-new > * {
-	margin: -25px;
 	flex-flow: row wrap;
+	margin: -25px;
 
 	> * {
-		width: 350px;
+		box-sizing: content-box;
 		border: 25px solid white;
+		width: 300px;
 		flex-grow: 1;
+
+		&.sidebar {
+			flex-grow: 0;
+			width: 250px;
+			text-align: left; // Too small to justify.
+		}
 
 		> * {
 			flex-grow: 1;
@@ -232,8 +257,8 @@ form {
 
 	> :nth-child(1) {
 		@media (min-width: 720px) {
-			width: 700px;
 			flex-grow: 2;
+			width: 650px;
 		}
 		h3 {
 			font-size: 1.8rem;
@@ -243,45 +268,7 @@ form {
 	}
 }
 
-.with-sidebar {
-	align-items: stretch;
-
-	> * {
-		flex-flow: row wrap;
-		align-items: flex-start;
-
-		margin: -25px;
-
-		> * {
-			margin: 25px;
-		}
-
-		> :first-child {
-			width: 500px;
-			flex-grow: 1;
-		}
-
-		> :last-child {
-			width: 250px;
-
-			ul {
-				padding: 0;
-
-				li {
-					padding: 0;
-					display: block;
-					text-align: left;
-
-					* {
-						display: inline;
-					}
-				}
-			}
-		}
-	}
-}
-
-article > * {
+.text-container {
 	align-items: stretch;
 
 	> * {
@@ -289,6 +276,13 @@ article > * {
 		margin-bottom: 0.3em;
 		padding-top: 0;
 		padding-bottom: 0;
+	}
+
+	li {
+		> p, > ul, > ol {
+			margin-top: 0.5em;
+			margin-bottom: 0.3em;
+		}
 	}
 
 	> :first-child {
@@ -309,35 +303,18 @@ article > * {
 				display: inline;
 			}
 		}
-	}
-}
+		ul {
+			padding: 0;
 
-aside {
-	text-align: left;
-}
+			li {
+				padding: 0;
+				display: block;
+				text-align: left;
 
-section a[href] {
-	border-bottom: 1px solid;
-	border-bottom-color: hsla(0, 0%, 0%, 0.25) !important;
-	color: inherit;
-	text-decoration: none;
-	transition: border-bottom-color 0.15s ease-in-out;
-
-	&:hover {
-		border-bottom-color: currentColor !important;
-	}
-}
-
-img {
-	width: 100%;
-}
-
-blockquote {
-	border-left: 0.2em solid #ccc;
-	padding: 1em 0 1em 1.5em;
-	color: #777;
-
-	> :last-child {
-		margin-bottom: 0;
+				* {
+					display: inline;
+				}
+			}
+		}
 	}
 }

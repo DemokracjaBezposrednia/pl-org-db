@@ -117,7 +117,6 @@ export default class FilesystemSource {
 
 		return {
 			id: dir ? `${dir}/${name}` : name,
-			author: dir,
 			name: name,
 			slug: name.replace(/ /g, '-'),
 			internal: {

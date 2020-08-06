@@ -1,28 +1,34 @@
 <template>
 	<Layout>
-		<section class="container-fluid with-sidebar" v-if="ready">
-			<article resource="#plank" typeof="Chapter">
+		<main v-if="ready">
+			<article resource="#plank" typeof="Chapter" class="container-fluid row-new">
 				<div>
-					<h1 property="name">{{plank.name}}</h1>
-					<nav>
-						<span class="float-left">« <g-link href="/program/Referendum">Referendum</g-link></span>
-						<span class="float-right"><g-link href="/program/Weto-obywatelskie">Weto obywatelskie</g-link> »</span>
-					</nav>
-					<p property="abstract" class="lead">{{plank.lead}}</p>
-					<div property="articleBody" v-html="plank.content_html"/>
-					<h2>Komentarze</h2>
-					<div class="fb-comments" :data-href="`http://db.org.pl${plank.path}`" data-numposts="5" data-width="100%"></div>
+					<div>
+						<div class="text-container">
+							<h1 property="name">{{plank.name}}</h1>
+							<nav>
+								<span class="float-left">« <g-link href="/program/Referendum">Referendum</g-link></span>
+								<span class="float-right"><g-link href="/program/Weto-obywatelskie">Weto obywatelskie</g-link> »</span>
+							</nav>
+							<p property="abstract" class="lead">{{plank.lead}}</p>
+							<div property="articleBody" v-html="plank.content_html"/>
+							<h2>Komentarze</h2>
+							<div class="fb-comments" :data-href="`http://db.org.pl${plank.path}`" data-numposts="5" data-width="100%"></div>
+						</div>
+					</div>
+					<div class="sidebar">
+						<aside class="text-container">
+							<nav rel="isPartOf" resource="/program#program" typeof="Book">
+								<h2 property="name"><g-link to="/program">Nowe reguły gry</g-link></h2>
+								<ul rel="hasPart">
+									<li v-for="chapter in index" :key="chapter.path" :resource="`${chapter.path}#plank`" typeof="Chapter"><g-link :href="chapter.path">{{chapter.name}}</g-link></li>
+								</ul>
+							</nav>
+						</aside>
+					</div>
 				</div>
-				<aside>
-					<nav rel="isPartOf" resource="/program#program" typeof="Book">
-						<h2 property="name"><g-link to="/program">Nowe reguły gry</g-link></h2>
-						<ul rel="hasPart">
-							<li v-for="chapter in index" :key="chapter.path" :resource="`${chapter.path}#plank`" typeof="Chapter"><g-link :href="chapter.path">{{chapter.name}}</g-link></li>
-						</ul>
-					</nav>
-				</aside>
 			</article>
-		</section>
+		</main>
 	</Layout>
 </template>
 

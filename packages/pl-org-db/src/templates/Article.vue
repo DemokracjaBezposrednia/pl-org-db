@@ -1,39 +1,45 @@
 <template>
 	<Layout>
-		<section class="container-fluid with-sidebar" v-if="ready">
-			<article typeof="Article" resource="#article">
+		<main v-if="ready">
+			<article resource="#article" typeof="Article" class="container-fluid row-new">
 				<div>
-					<h1 property="name">{{article.name}}</h1>
-					<p>{{article.author.name}}, <span property="datePublished" :content="article.date">{{DateTime.fromISO(article.date).toLocaleString(DateTime.DATE_FULL)}}</span></p>
-					<nav>
-						<span class="float-left" v-if="previous">« <g-link :to="previous.path">{{previous.name}}</g-link></span>
-						<span class="float-right" v-if="next"><g-link :to="next.path">{{next.name}}</g-link> »</span>
-					</nav>
-					<div property="articleBody" v-html="article.content_html"/>
-					<nav>
-						<span class="float-left" v-if="previous">« <g-link :to="previous.path">{{previous.name}}</g-link></span>
-						<span class="float-right" v-if="next"><g-link :to="next.path">{{next.name}}</g-link> »</span>
-					</nav>
-					<h2>Komentarze</h2>
-					<div class="fb-comments" :data-href="`http://db.org.pl${article.path}`" data-numposts="5" data-width="100%"></div>
-				</div>
-				<aside rel="author" typeof="Person" resource="#author">
-					<div rel="image" v-if="article.author.image">
-						<img :src="article.author.image">
+					<div>
+						<div class="text-container">
+							<h1 property="name">{{article.name}}</h1>
+							<p>{{article.author.name}}, <span property="datePublished" :content="article.date">{{DateTime.fromISO(article.date).toLocaleString(DateTime.DATE_FULL)}}</span></p>
+							<nav>
+								<span class="float-left" v-if="previous">« <g-link :to="previous.path">{{previous.name}}</g-link></span>
+								<span class="float-right" v-if="next"><g-link :to="next.path">{{next.name}}</g-link> »</span>
+							</nav>
+							<div property="articleBody" v-html="article.content_html"/>
+							<nav>
+								<span class="float-left" v-if="previous">« <g-link :to="previous.path">{{previous.name}}</g-link></span>
+								<span class="float-right" v-if="next"><g-link :to="next.path">{{next.name}}</g-link> »</span>
+							</nav>
+							<h2>Komentarze</h2>
+							<div class="fb-comments" :data-href="`http://db.org.pl${article.path}`" data-numposts="5" data-width="100%"></div>
+						</div>
 					</div>
-					<h2 property="name">{{article.author.name}}</h2>
-					<p property="description">{{article.author.bio}}</p>
-					<nav rev="author">
-						<h3>Artykuły</h3>
-						<ul>
-							<li v-for="edge in article.author.articles.edges" :key="edge.node.path">
-								<g-link :to="edge.node.path">{{edge.node.name}}</g-link>
-							</li>
-						</ul>
-					</nav>
-				</aside>
+					<div class="sidebar">
+						<aside rel="author" resource="#author" typeof="Person" class="text-container">
+							<div rel="image" v-if="article.author.image">
+								<img :src="article.author.image">
+							</div>
+							<h2 property="name">{{article.author.name}}</h2>
+							<p property="description">{{article.author.bio}}</p>
+							<nav rev="author">
+								<h3>Artykuły</h3>
+								<ul>
+									<li v-for="edge in article.author.articles.edges" :key="edge.node.path">
+										<g-link :to="edge.node.path">{{edge.node.name}}</g-link>
+									</li>
+								</ul>
+							</nav>
+						</aside>
+					</div>
+				</div>
 			</article>
-		</section>
+		</main>
 	</Layout>
 </template>
 
