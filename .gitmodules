@@ -1,0 +1,9 @@
+[submodule "packages/pl-org-db/program"]
+	path = packages/pl-org-db/program
+	url = https://github.com/DemokracjaBezposrednia/program
+[submodule "packages/pl-org-db/ludzie"]
+	path = packages/pl-org-db/ludzie
+	url = https://github.com/DemokracjaBezposrednia/ludzie
+[submodule "packages/pl-org-db/blog"]
+	path = packages/pl-org-db/blog
+	url = https://github.com/DemokracjaBezposrednia/blog
